@@ -15,7 +15,7 @@ class CashRegister
         # binding.pry 
         price_list = []
         price_list << (price * quantity)
-        @total = (price_list.reduce(@total) {|sum, item_cost| sum + item_cost})
+        self.total = (price_list.reduce(@total) {|sum, item_cost| sum + item_cost})
         # binding.pry 
         self.last_transaction = price * quantity 
         # binding.pry  
@@ -23,8 +23,8 @@ class CashRegister
 
     def apply_discount
         if discount != 0
-        @total = (self.total - self.total * discount.to_f/100).to_i
-        return "After the discount, the total comes to $#{@total}."
+        self.total = (self.total - self.total * discount.to_f/100).to_i
+        return "After the discount, the total comes to $#{self.total}."
         else 
         return "There is no discount to apply."
         end
