@@ -5,7 +5,6 @@ class CashRegister
         @total = 0
         @discount = discount
         @cart = []
-        @last_transaction = last_transaction
     end
      
 
